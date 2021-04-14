@@ -1,0 +1,144 @@
+/*.content {
+    grid-area: c;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1em repeat(4, 1fr) 1em;
+    grid-template-rows: 1em 3em auto 1em;
+    grid-gap: 1em;
+    height: 73em;
+}*/
+
+#projects {
+    grid-column: 2 / 6;
+    grid-row: 3 / 7;
+    background-color: rgba(0, 0, 0, 0.091);
+    border-radius: 10px;
+}
+
+.popup-div {
+    width: 20em;
+    height: 30em;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1em 1fr 5em 1fr 1em;
+    grid-template-rows: repeat(8, 3em);
+    background-color: rgb(179, 179, 179);
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 10px;
+}
+
+.popup {
+    display: none;
+}
+
+/* FIX STYLING FOR POPUP BETTER*/
+#project-new {
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+}
+
+#popup-title {
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+}
+
+#project-title {
+    grid-row: 3 / 4;
+    grid-column: 2 / 5;
+    height: 50%;
+}
+
+#popup-desc {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+}
+
+#project-description {
+    grid-row: 5 / 6;
+    grid-column: 2 / 5;
+    height: 50%;
+}
+
+#popup-privacy {
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+}
+
+#project-privacy {
+    grid-row: 7 / 8;
+    grid-column: 2/3;
+    height: 50%;
+}
+
+#project-btn {
+    grid-row: 8 / 9;
+    grid-column: 2 / 5;
+    height: 50%;
+}
+
+#new-btn {
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: block;
+    margin-left: 10em;
+    margin-top: 0.5em;
+}
+
+.project-box {
+    border: 2px solid black;
+    height: auto;
+    width: 15em;
+    margin: 1em;
+    padding: 1em;
+}
+
+.project-box > h2 {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    font-variant: small-caps;
+    font-size: x-large;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.project-box > p {
+    margin-top: 0.5em;
+    font-size: medium;
+    font-weight: 300;
+    font-style: italic;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#project-h1 {
+    /*This field used as searchbar + buttons etc*/
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    text-align: center;
+}
+
+.close {
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: block;
+    margin-left: 19em;
+    margin-top: -0.5em;
+}

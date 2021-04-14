@@ -1,0 +1,91 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Projects</title>
+        <link rel="stylesheet" href="../css/menu.css" />
+        <link rel="stylesheet" href="../css/projects.css" />
+        <link rel="icon" href="../img/favicon.png" sizes="16x16" type="image/png" />
+        <script type="text/javascript" src="../js/projectRendering.js"></script>
+        <script type="text/javascript" src="../js/database.js"></script>
+        <script type="text/javascript" src="../js/dataChanges.js"></script>
+        <script type="text/javascript" src="../js/projects.js"></script>
+        <script type="text/javascript" src="../js/menu.js"></script>
+        <script type="text/javascript" src="../js/newProject.js"></script>
+        <script type="text/javascript" src="../js/colorpicker.js"></script>
+    </head>
+    <body>
+        <div class="popup">
+            <div class="popup-div">
+                <!-- DIRRRTY placeholder stuff, ment to be a part of home.html, the popup for new project
+                aka page 4 of Tina.prototype -->
+                <div class="close" onclick="closePopup('.popup')">X</div>
+                <h2 id="project-new">Create New Project</h2>
+                <br />
+                <h3 id="popup-title">Title</h3>
+                <input type="text" id="project-title" placeholder="project title" />
+                <br />
+                <h3 id="popup-desc">Description</h3>
+                <input type="text" id="project-description" placeholder="description" />
+                <br />
+                <h3 id="popup-privacy">Privacy</h3>
+
+                <select id="project-privacy">
+                    <option value="Public">Public</option>
+                    <option value="Private">Private</option>
+                </select>
+
+                <br />
+                <button id="project-btn" onclick="newProject()">Maek new project!</button>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <!-- Topbar -->
+            <div class="menu" id="topbar">
+                <p class="pagetitle">PROJECTS</p>
+            </div>
+
+            <!-- Side bar : Navigation -->
+            <div class="menu" id="sidebar">
+                <!-- User image -->
+
+                <div class="img-container">
+                    <!-- <img alt="userimg" class="avatar"> -->
+                </div>
+                <div class="link-container">
+                    <a class="menu-name">USERNAME</a>
+                    <a class="link-btn pointer" href="home.html">HOME</a>
+                    <a class="link-btn pointer" href="projects.html">PROJECTS</a>
+                    <a class="link-btn pointer" href="tasks.html">TASKS</a>
+                    <a class="link-btn pointer" href="settings.html">SETTINGS</a>
+
+                    <hr class="menubreak" />
+
+                    <a class="link-btn pointer" href="home.html">CURRENT PROJECT</a>
+
+                    <div class="logout pointer">
+                        <img id="logout-btn" src="../img/logout.png" onclick="logout()" alt="logout" />
+                    </div>
+
+                    <div class="theme pointer">
+                        <div class="color-popup">
+                            <div class="color-select" id="rgb(30, 30, 30)" style="background: rgb(30, 30, 30)"></div>
+                            <div class="color-select" id="grey" style="background: GREY"></div>
+                            <div class="color-select" id="rgb(210, 145, 65)" style="background: rgb(210, 145, 65)"></div>
+                            <div class="color-select" id="rgb(41, 123, 150)" style="background: rgb(41, 123, 150)"></div>
+                            <div class="color-select" id="#709a74" style="background: #709a74"></div>
+                            <div class="color-select" id="#c65f5f" style="background: #c65f5f"></div>
+                        </div>
+                        <img id="colorPick" src="../img/color.png" alt="colorpicker" />
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div id="new-btn">+</div>
+                <h1 id="project-h1">PROJECTS</h1>
+                <div id="projects"></div>
+            </div>
+        </div>
+    </body>
+</html>

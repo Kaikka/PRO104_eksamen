@@ -1,0 +1,174 @@
+/* Adding font */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Jost';
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1em auto 1em;
+    grid-template-rows: 1em auto 1em;
+    grid-template-areas:
+    " t t t "
+    " . c . "
+    " . . . ";
+}
+
+/* Topbar */
+
+#topbar {
+    position: fixed;
+    width: 100%;
+    height: 4em;
+    background-color: rgb(20, 20, 20);
+    grid-area: t;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+/* Login/Signup box - center on page */
+
+.container {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    grid-area: c;
+    position: fixed;
+}
+
+#login-box {
+    display: block;
+    text-align: center;
+    border: 1px solid rgb(20, 20, 20);
+}
+
+#signup-box {
+    display: none;
+    text-align: center;
+    border: 1px solid rgb(20, 20, 20);
+
+}
+
+
+/* Login box - styling */
+
+#login-form{
+    width: 25em;
+}
+
+h3 {
+    margin: 0.5em;
+    font-size: x-large;
+}
+
+label {
+    font-size: x-small;
+}
+
+input {
+    margin-bottom: 1em;
+    width: 20em;
+    font-size: x-small;
+    border: 1px solid rgb(162, 162, 162);
+}
+
+.remember {
+    width: fit-content;
+    font-size: x-small;
+}
+
+button {
+    width: 8em;
+    height: 2em;
+    color: white;
+    background-color: rgb(20, 20, 20);
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+/* Sign up box - styling */
+
+#signup-form {
+    position: relative;
+    width: 25em;
+    height: 22em;
+}
+
+.close {
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: block;
+    margin-left: 24em;
+    margin-top: -0.5em;
+    cursor: pointer;
+}
+
+#failedLogin {
+    background-color: red;
+    display: none;
+}
+
+
+/* iPhone X : Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 812px) { 
+
+    .wrapper {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "t"
+        "c";
+    }
+
+    #login-btn {
+        height: 3em;
+        width: 10em;
+    }
+
+    #signup-btn {
+        height: 3em;
+        width: 10em;
+    }
+
+    .remember{
+        width: max-content;
+        font-size: large;
+    }
+
+    label {
+        font-size: medium;
+    }
+
+    #uname, #pwd, #fname, #lname, #username, #newpwd {
+        transform: scale(1.2);
+    }
+
+
+    #login-box, #signup-box {
+        transform: scale(0.8);
+    }
+    #signupbtn{
+        height: 3em;
+        width: 10em;
+    }
+
+   
+}

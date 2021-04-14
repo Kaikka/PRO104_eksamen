@@ -1,0 +1,377 @@
+/* Adding font */
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Jost";
+}
+
+.content {
+    grid-template-rows: 10% 10% 80%;
+    grid-template-columns: 100%;
+    padding-top: 3vh;
+}
+
+input#project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 88%;
+    font-size: x-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    color: white;
+    background-color: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+input#project-title:focus {
+    outline: none;
+    width: 40em;
+}
+
+input#project-desc {
+    grid-row: 1;
+    grid-column: 1;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0.5em;
+    margin-top: -0.5em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border: none;
+    font-style: italic;
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+input#project-desc:focus {
+    outline: none;
+}
+
+.status-bars {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100%;
+}
+
+.subcontent {
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.167);
+    border-radius: 10px;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.subcontent > input {
+    font-variant: small-caps;
+    font-weight: 500;
+    font-size: x-large;
+    border: none;
+    text-align: center;
+    padding-top: 0.2em;
+    margin-bottom: -0.5em;
+    background-color: rgba(0, 0, 0, 0);
+    width: 7em;
+}
+
+.subcontent > input:focus {
+    outline: none;
+}
+
+.delete-status {
+    position: relative;
+    width: 1em;
+    align-content: center;
+}
+
+.delete-task {
+    position: absolute;
+    width: 1em;
+    right: 0.2em;
+}
+
+.delete-task-wrap {
+    height: 1.3em;
+    position: relative;
+    width: 1.5em;
+    right: -10.2em;
+    top: 0.2em;
+}
+
+.task-wrap:hover {
+    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    transition: all 0.3s;
+}
+
+div.task-box > h2 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    font-variant: small-caps;
+    font-size: large;
+}
+
+div.task-box > hr {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+div.task-box > p.description {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 300;
+    font-size: small;
+    font-style: italic;
+}
+
+#update-task-title {
+    background-color: rgba(0, 0, 0, 0.078);
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 0.2em;
+
+}
+
+#update-task-desc {
+}
+
+.task-desc {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.078);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+.footer {
+    background-color: rgb(255, 255, 255);
+    grid-area: f;
+    z-index: 1;
+}
+
+.user-img {
+    justify-self: center;
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 1em;
+    /*    grid-column: 2;
+    grid-row: 2;*/
+}
+
+#project-desc {
+    width: 300px;
+    height: 200px;
+}
+
+.popup-status,
+.popup-task,
+.popup-selected-task,
+.popup-team {
+    display: none;
+    background-color: rgb(179, 179, 179);
+    border-radius: 10px;
+}
+
+.team-output {
+    margin-bottom: 0.5em;
+    grid-row: 3/6;
+    grid-column: 2/5;
+    overflow-y: scroll;
+    background-color: rgba(255, 255, 255, 0.146);
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.nteam-output {
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.146);
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+    position: absolute;
+    top: 3em;
+    left: -15em;
+    width: 12em;
+    height: fit-content;
+}
+
+.team-output > div {
+    margin: 0.2em;
+    display: inline-block;
+}
+
+.add-new-assignee {
+    text-transform: uppercase;
+}
+
+div.popup-assignments > img {
+    margin: 0.5em;
+    display: inline-block;
+}
+
+.assignment-menu {
+    width: 14em;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.289);
+    display: none;
+    left: 11em;
+    top: 1em;
+    position: relative;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+.assignment-menu > div {
+    display: inline-block;
+    width: auto;
+}
+
+.popup-div {
+    width: 15em;
+    height: 30em;
+    left: 55%;
+    top: 50%;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    display: none;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1em 1fr 6em 1fr 1em;
+    grid-template-rows: 1em 2em 3em 1fr 1fr 2em 2em;
+    background-color: rgb(179, 179, 179);
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup-input {
+    grid-column: 2 / 5;
+    grid-row: 3 / 4;
+    height: fit-content;
+}
+
+.popup-assignments {
+    grid-column: 2 / 5;
+    grid-row: 4 / 5;
+}
+
+.popup-assignments img {
+    width: 40px;
+}
+
+.popup-title {
+    grid-column: 2/5;
+    grid-row: 2 / 3;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.popup-btn {
+    grid-column: 3 / 4;
+    grid-row: 7 / 8;
+    height: 2em;
+}
+
+.task-desc {
+    grid-row: 5 / 6;
+    grid-column: 2 / 5;
+    text-align: start;
+}
+
+#add-task-to-status {
+    grid-row: 6 / 7;
+    grid-column: 2 / 5;
+    height: 1.7em;
+    margin-top: 0.2em;
+}
+
+.close {
+    position: relative;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: block;
+    margin-left: 14em;
+    margin-top: -0.5em;
+}
+
+.task-complete {
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 50%;
+    position: relative;
+}
+
+.checkbox-task {
+    grid-row: 6 /7;
+    grid-column: 2 / 5;
+}
+
+@media only screen and (min-device-width: 1441px) and (max-device-width: 2561px) {
+
+    .subcontent {
+        width: 300px;
+        height: 800px;
+        background-color: rgba(0, 0, 0, 0.167);
+        border-radius: 10px;
+        overflow-y: scroll;
+        text-align: center;
+        margin-bottom: 1em;
+        margin-right: 1em;
+    }
+}
+
+/* Pads : Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .user-img {
+        transform: scale(0.5);
+    }
+}
+
+/* Mini Pads : Portrait and Landscape */
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .user-img {
+        transform: scale(0.5);
+    }
+}
+
+/* Phones : Portrait and Landscape */
+@media only screen and (min-device-width: 300px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 3) {
+    img {
+        transform: scale(0.5);
+        position: relative;
+        left: -2.5em;
+    }
+
+    .sidebar {
+        width: 5em;
+    }
+}

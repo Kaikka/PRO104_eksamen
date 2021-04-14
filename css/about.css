@@ -1,0 +1,77 @@
+/* Adding font */
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Setting style for content */
+
+.content {
+    padding: 2vw;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    grid-gap: 1em;
+    position: relative;
+}
+
+#aboutUs-div {
+    background-color: rgba(0, 0, 0, 0.091);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+h2#aboutUs {
+    text-transform: uppercase;
+}
+
+hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2#aboutUs:hover {
+    text-decoration: line-through;
+    transform: rotateX(180deg);
+}
+
+div.imgContainerP {
+    width: 15%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: 50px;
+    float: left;
+}
+
+div.pictures-pol{
+    text-align: center;
+    padding: 20 px 20px;
+    float: left;
+}
+
+.name-txt {
+    font-style: italic;
+}
+
+.pictures-pol>.name-txt, .stud-course {
+    font-size: small;
+    font-weight: 400;
+    font-variant: small-caps;
+}
+
+
+/* Phones : Portrait and Landscape */
+@media only screen
+and (min-device-width: 300px)
+and (max-device-width: 600px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .content {
+        grid-area: c;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: 1em repeat(4, 1fr) 1em;
+        grid-template-rows: 1em auto 1em;
+        grid-gap: 1em;
+        height: 130em;
+    }
+}

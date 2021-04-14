@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+
+        <link rel="stylesheet" href="css/login.css" />
+        <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png" />
+        <script type="text/javascript" src="js/database.js"></script>
+        <script type="text/javascript" src="js/dataChanges.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Topbar -->
+            <div id="topbar">
+                <h2>TEAM PLANNER</h2>
+            </div>
+
+            <!-- Container for login and sign up -->
+            <div class="container">
+                <!-- Login -->
+                <div id="login-box">
+                    <form id="login-form" onsubmit="return false">
+                        <h3>LOGIN</h3>
+                        <div id="failedLogin">FAILED LOGIN!</div>
+
+                        <label for="uname"
+                            >USERNAME
+                            <br />
+                            <input type="text" placeholder=" USERNAME" id="uname" />
+                        </label>
+
+                        <br />
+
+                        <label for="pwd"
+                            >PASSWORD
+                            <br />
+                            <input type="password" placeholder=" PASSWORD" id="pwd" />
+                        </label>
+
+                        <br />
+                        <br />
+
+                        <button id="login-btn">Login</button>
+
+                        <button id="signup-btn" onclick="swapForm('signUp')">Sign up</button>
+                    </form>
+                </div>
+
+                <!-- Sign up -->
+                <div id="signup-box">
+                    <form id="signup-form" onsubmit="return false">
+                        <div onclick="swapForm('login')" class="close pointer">X</div>
+
+                        <h3>SIGN UP</h3>
+
+                        <label for="fname"
+                            >FIRST NAME
+                            <br />
+                            <input type="text" placeholder=" FIRST NAME" id="fname" required />
+                        </label>
+
+                        <br />
+
+                        <label for="lname"
+                            >LAST NAME
+                            <br />
+                            <input type="text" placeholder=" LAST NAME" id="lname" required />
+                        </label>
+
+                        <br />
+
+                        <label for="username"
+                            >USERNAME
+                            <br />
+                            <input type="text" placeholder=" USERNAME" id="username" required />
+                        </label>
+
+                        <br />
+
+                        <label for="newpwd"
+                            >PASSWORD
+                            <br />
+                            <input type="password" placeholder=" PASSWORD" id="newpwd" required />
+                        </label>
+
+                        <br />
+
+                        <button id="signupbtn">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

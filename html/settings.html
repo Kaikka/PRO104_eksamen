@@ -1,0 +1,116 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile</title>
+        <link rel="stylesheet" href="../css/menu.css" />
+        <link rel="stylesheet" href="../css/settings.css" />
+        <link rel="icon" href="../img/favicon.png" sizes="16x16" type="image/png" />
+        <script type="text/javascript" src="../js/menu.js"></script>
+        <script type="text/javascript" src="../js/settings.js"></script>
+        <script type="text/javascript" src="../js/database.js"></script>
+        <script type="text/javascript" src="../js/dataChanges.js"></script>
+        <script type="text/javascript" src="../js/colorpicker.js"></script>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <!-- Navigation -->
+
+            <div class="menu" id="sidebar">
+                <div class="top">
+
+                    <!-- User image -->
+                    <div class="img-container">
+                        <!-- <img src="../img/dude.jpg" alt="userimg" class="avatar" /> -->
+                    </div>
+                    <div class="link-container">
+                        <a class="menu-name">USERNAME</a>
+                        <a class="link-btn pointer" href="settings.html">PROFILE</a>
+    
+    
+                        <a class="link-btn pointer" href="home.html">HOME</a>
+                        <!-- <a class="link-btn" href="projects.html">PROJECTS</a>
+                        <a class="link-btn" href="tasks.html">TASKS</a> -->
+                    </div>
+                </div>
+                <div class="mid">
+                </div>
+                <div class="bottom">
+                   <a class="link-btn about pointer" href="about.html">About us</a>
+                   <div class="icon-container">
+
+                       <div class="logout pointer">
+                           <img id="logout-btn" src="../img/logout.png" onclick="logout()" alt="logout" />
+                       </div>
+                       <div class="theme pointer">
+                           <div class="color-popup">
+                               <div class="color-select" id="rgb(30, 30, 30)" style="background: rgb(30, 30, 30);"></div>
+                               <div class="color-select" id="grey" style="background: GREY;"></div>
+                               <div class="color-select" id="rgb(210, 145, 65)" style="background: rgb(210, 145, 65);"></div>
+                               <div class="color-select" id="rgb(41, 123, 150)" style="background: rgb(41, 123, 150);"></div>
+                               <div class="color-select" id="#709a74" style="background: #709a74;"></div>
+                               <div class="color-select" id="#c65f5f" style="background: #c65f5f;"></div>
+                           </div>
+                           <img id="colorPick" src="../img/color.png" alt="colorpicker" />
+                       </div>
+                   </div>
+                </div>
+
+            </div>
+            <div class="main">
+                <div class="menu" id="topbar">
+                    <p class="pagetitle">HOME</p>
+                    <div class="mobile-menu">
+                        <img id="menu-icon" src="../img/mobile-menu.png" alt="menu" />
+                    </div>
+                </div>
+                <div class="content">
+                    <!-- Bare la en div inni content for at grid ikke skal fucke til ALT -->
+                    <div class="user-info">
+                        <label for="first-name"
+                            >Firstname: <br />
+                            <input type="text" id="first-name" placeholder="First name" class="userinfo" />
+                        </label>
+                        <br />
+                        <label for="last-name">
+                            Lastname: <br />
+                            <input type="text" id="last-name" placeholder="Last name" class="userinfo" />
+                        </label>
+                        <br />
+                        <label for="username"
+                            >Username: <br />
+                            <input type="text" id="username" placeholder="Username" class="userinfo" />
+                            <br />
+                            <button onclick="changeProfileSettings() + window.location.reload();">Save</button>
+                        </label>
+                        <br /><br />
+                        <label for="password"
+                            >Change password: <br />
+                            <input type="password" id="password" placeholder="New password" />
+                            <br />
+                            <input type="password" id="password-confirm" placeholder="Confirm new password" />
+                            <br />
+                            <button onclick="changePassword()">Update</button>
+                            <div id="password-error"></div>
+                        </label>
+                        <br />
+    
+                        <!-- Something with profile picture, upload/edit/blabla -->
+                        <div>
+                            <label
+                                >Update profile picture:
+                                <div>
+                                    <input name="image" type="file" onchange="handleImgSelect(event)" />
+                                </div>
+                            </label>
+                            <br />
+                            <!-- Div for Image-preview -->
+                            <div id="imagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
